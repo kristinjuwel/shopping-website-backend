@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173") // Replace with the correct URL of your React application
+@CrossOrigin(origins = "https://shopping-website-121.vercel.app") // Replace with the correct URL of your React application
 public class UserController {
 
     private final UserService userService;
@@ -26,7 +26,7 @@ public class UserController {
     public ResponseEntity<String> addUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.addUser(user));
     }
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://shopping-website-121.vercel.app")
     @GetMapping("/verify")
     public ResponseEntity<String> verifyUser(@RequestParam("email") String email,
             								@RequestParam("otp") Integer otp) {
