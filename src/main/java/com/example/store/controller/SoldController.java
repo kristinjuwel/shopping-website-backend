@@ -17,7 +17,7 @@ import com.example.store.model.Sold;
 import com.example.store.service.SoldService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173") // Replace with the correct URL of your React application
+@CrossOrigin(origins = "https://shopping-website-121.vercel.app") // Replace with the correct URL of your React application
 public class SoldController {
 	@Autowired
 	SoldService soldService;
@@ -52,7 +52,7 @@ public class SoldController {
 		soldService.setDelivered(transNo);
 		return ResponseEntity.ok("Order Delivered");
 	}
-	@CrossOrigin(origins = "http://localhost:5173")
+	@CrossOrigin(origins = "https://shopping-website-121.vercel.app")
 	@PutMapping("/setCompleted/{transNo}")
 	public ResponseEntity<ResponseEntity<String>> setCompleted(@PathVariable Integer transNo) {
 		return ResponseEntity.ok(soldService.setCompleted(transNo));
