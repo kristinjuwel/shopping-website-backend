@@ -18,7 +18,7 @@ import com.example.store.model.Item;
 import com.example.store.service.ItemService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173") // Replace with the correct URL of your React application
+@CrossOrigin(origins = "https://shopping-website-121.vercel.app") // Replace with the correct URL of your React application
 public class ItemController {
     @Autowired
     ItemService itemService;
